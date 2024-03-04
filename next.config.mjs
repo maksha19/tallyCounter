@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
-    basePath: "/tallyCounter",
+    basePath: process.env.NODE_ENV === "development"? '': "/tallyCounter",
     output: "export",
     reactStrictMode: true,
 };
